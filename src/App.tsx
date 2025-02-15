@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import viteLogo from '/vite.svg';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './assets/styles/globals';
+import defaultTheme from './assets/styles/themes/default';
 
 function App() {
-	const [count, setCount] = useState(0);
-
-	return null;
+	return (
+		<ThemeProvider theme={defaultTheme}>
+			<GlobalStyles />
+			<h1>Oi</h1>
+		</ThemeProvider>
+	);
 }
 
 export default App;
